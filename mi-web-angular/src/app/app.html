@@ -1,0 +1,346 @@
+<!-- Encabezado Superior: Contiene el logo y la primera barra de navegación -->
+<header class="top-header">
+    <!-- Logo de la institución -->
+    <div class="logo">
+        <img src="assets/logo_compensar.svg" alt="Compensar Logo">
+    </div>
+    <!-- Navegación superior -->
+    <nav class="top-nav">
+        <a href="https://ucompensar.edu.co/graduados/">Graduados</a>
+        <a href="https://ucompensar.edu.co/nuestros-estudiantes/">Estudiantes</a>
+        <a href="https://academico.ucompensar.edu.co:8091/academusoft/academico/inicioSeguroAspirante.jsp">Estado de Admisión</a>
+        <a href="https://ucompensar.edu.co/reingresos/">Reingresos</a>
+        <a href="https://estudiantes.ucompensar.edu.co:8081/ucompensarPolLTD/">Pago en Línea</a>
+        <a href="https://unipanamericanaeduco.sharepoint.com/Portal%20MiPana/SitePages/INICIOPORTAL.aspx">Aplicativos</a>
+        <a href="https://emisora.ucompensar.edu.co/">Emisora</a>
+        <a href="https://ucompensar.edu.co/blog/">Blog</a>
+        <a href="https://www.elempleo.com/co/sitio-empresarial/ucompensar" class="trabajo-btn">Trabaje con nosotros</a>
+    </nav>
+</header>
+
+<!-- Navegación Principal -->
+<nav class="main-nav">
+    <div class="main-menu">
+        <a href="https://ucompensar.edu.co/nuestra-institucion/">La institución</a>
+        <a href="https://ucompensar.edu.co/inscripciones/">Estudia con Nosotros</a>
+        <a href="https://ucompensar.edu.co/facultades/">Facultades</a>
+        <a href="https://ucompensar.edu.co/programas/">Programas</a>
+        <a href="https://nuevocampus.ucompensar.edu.co/">Nuevo Campus</a>
+        <a href="https://ucompensar.edu.co/sena/">SENA</a>
+        <a href="https://ucompensar.edu.co/zona-financiera/">Zona Financiera</a>
+        <a href="https://edtech.ucompensar.edu.co/">EdTech</a>
+    </div>
+    <div class="search-icon">
+        <span>🔍</span>
+    </div>
+</nav>
+
+<!-- Migas de Pan -->
+<div class="breadcrumb">
+    <a href="#">INICIO</a> / <a href="#">PROGRAMAS</a> / INGENIERÍA DE SOFTWARE - BOGOTÁ
+</div>
+
+<!-- Tipo de Programa -->
+<div class="program-type">
+    <div class="presencial-tag">Presencial</div>
+</div>
+
+<!-- Contenido Principal -->
+<div class="main-content">
+    <div class="program-info">
+        <h1 class="program-title">Ingeniería de Software – Bogotá</h1>
+        <p class="program-description">
+            Desarrolla soluciones de <span>software</span> y conviértete en un líder
+            digital de uno de los sectores con mayor crecimiento del
+            mercado. Obtén tres titulaciones a lo largo de tu formación
+        </p>
+        <a href="https://academico.ucompensar.edu.co:8091/academusoft/academico/inscripcionLineaBootstrap/inicioSeguroInscripcion.jsp" class="enrollment-btn">Inscríbete aquí</a><br>
+        <a href="https://ucompensar.edu.co/wp-content/uploads/2025/01/ProgramaINGENIERIA-DE-SOFTWARE-Presencial.pdf" class="fees-btn">Ver tarifas de créditos aquí</a>
+    </div>
+    <!-- Imagen del Programa -->
+    <div class="program-image">
+        <img src="assets/ingenieria_software_estudiante.jpg" alt="Estudiante de Ingeniería de Software">
+    </div>
+</div>
+
+<!-- Detalles del Programa -->
+<div class="program-details">
+    <p>SNIES: 109130</p>
+    <p>Resolución: 9058 del 28 de agosto de 2019</p>
+    <p>Duración del programa: 10 semestres</p>
+    <p>Facultad de: Ingeniería</p>
+    <p>Años de vigencia: 7 años</p>
+    <p>Jornada diurna: 7:00 a.m. a 1:00 p.m.</p>
+    <p>Jornada nocturna: 6:00 p.m. a 10:00 p.m.</p>
+</div>
+
+<!-- Costo del Programa -->
+<div class="program-cost">
+    <h2>Valor primer semestre</h2>
+    <p>$ 4.676.800</p>
+</div>
+
+<hr class="divider">
+
+<!-- Formulario de Contacto (LOGICA ANGULAR INTEGRADA) -->
+<div class="contact-form-container">
+    <h2 class="section-title">Déjanos tus datos</h2>
+    
+    <form class="contact-form" (ngSubmit)="enviarFormulario()">
+        <div class="form-row">
+            <input type="text" placeholder="Nombre" class="form-input" 
+                   [(ngModel)]="datosFormulario.nombre" name="nombre">
+            
+            <input type="text" placeholder="Apellidos" class="form-input"
+                   [(ngModel)]="datosFormulario.apellido" name="apellido">
+        </div>
+        
+        <div class="form-row">
+            <input type="text" placeholder="Documento de Identidad" class="form-input"
+                   [(ngModel)]="datosFormulario.documento" name="documento">
+            
+            <input type="email" placeholder="Correo" class="form-input"
+                   [(ngModel)]="datosFormulario.correo" name="correo">
+            
+            <input type="tel" placeholder="Celular" class="form-input"
+                   [(ngModel)]="datosFormulario.celular" name="celular">
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="study-start">¿Cuándo planeas iniciar tus estudios?</label>
+                <select id="study-start" class="form-select"
+                        [(ngModel)]="datosFormulario.inicio" name="inicio">
+                    <option>Inmediatamente</option>
+                    <option>Próximo semestre</option>
+                    <option>Próximo año</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="financing-needed">¿Necesitas financiación?</label>
+                <select id="financing-needed" class="form-select"
+                        [(ngModel)]="datosFormulario.financiacion" 
+                        name="financiacion"
+                        (change)="verificarFinanciacion()">
+                    <option value="">Selecciona...</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="education-level">¿Cuál es tu nivel de escolaridad?</label>
+                <select id="education-level" class="form-select"
+                        [(ngModel)]="datosFormulario.escolaridad" name="escolaridad">
+                    <option>9°</option>
+                    <option>10°</option>
+                    <option>11°</option>
+                    <option>Bachiller</option>
+                    <option>Técnico</option>
+                    <option>Tecnólogo</option>
+                    <option>Profesional</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="contact-preference">Canal preferido de contacto</label>
+                <select id="contact-preference" class="form-select"
+                        [(ngModel)]="datosFormulario.contacto" name="contacto">
+                    <option>Todos</option>
+                    <option>Email</option>
+                    <option>Celular</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="checkbox-container">
+                <input type="checkbox" id="policy-accept"
+                       [(ngModel)]="datosFormulario.aceptaPolitica" name="politica">
+                <label for="policy-accept">Acepto la <a href="https://ucompensar.edu.co/wp-content/uploads/2023/02/UCompensar_Politica_Tratamiento_Datos_Personales.pdf" target="_blank" class="policy-link">Política de Protección de Datos Personales</a></label>
+            </div>
+            <button type="submit" class="submit-btn" [disabled]="enviando">
+                {{ textoBoton }}
+            </button>
+        </div>
+        
+        <!-- Popup de Financiación -->
+        <div class="financing-popup" *ngIf="mostrarPopup" style="display: block;">
+            {{ mensajePopup }}
+        </div>
+    </form>
+</div>
+
+<hr class="divider">
+
+<!-- Sección de Titulaciones -->
+<div class="degrees-container">
+    <h2 class="section-title">Titulaciones</h2>
+    
+    <div class="degrees-row">
+        <div class="degree-card">
+            <h3 class="degree-level">Técnica Profesional en</h3>
+            <h4 class="degree-name">PROGRAMACIÓN DE APLICACIONES DE SOFTWARE</h4>
+            <p class="degree-details">Resolución 9058 del 28 de agosto de 2019</p>
+            <p class="degree-details">Años de vigencia: 7 años</p>
+            <p class="degree-details">SNIES: 108334</p>
+            <a href="https://ucompensar.edu.co/wp-content/uploads/2025/01/ProgramaINGENIERIA-DE-SOFTWARE-Presencial.pdf" class="fees-link">Ver tarifas de créditos aquí</a>
+        </div>
+        
+        <div class="degree-card">
+            <h3 class="degree-level">Tecnología en</h3>
+            <h4 class="degree-name">DESARROLLO DE APLICACIONES WEB Y MÓVILES</h4>
+            <p class="degree-details">Resolución 9057 del 28 de agosto de 2019</p>
+            <p class="degree-details">Años de vigencia: 7 años</p>
+            <p class="degree-details">SNIES: 108335</p>
+            <a href="https://ucompensar.edu.co/wp-content/uploads/2025/01/ProgramaINGENIERIA-DE-SOFTWARE-Presencial.pdf" class="fees-link">Ver tarifas de créditos aquí</a>
+        </div>
+        
+        <div class="degree-card">
+            <h3 class="degree-level">Profesional en</h3>
+            <h4 class="degree-name">INGENIERÍA DE SOFTWARE</h4>
+            <p class="degree-details">Resolución 9058 del 28 de agosto de 2019</p>
+            <p class="degree-details">Años de vigencia: 7 años</p>
+            <p class="degree-details">SNIES: 109130</p>
+            <a href="https://ucompensar.edu.co/wp-content/uploads/2025/01/ProgramaINGENIERIA-DE-SOFTWARE-Presencial.pdf" class="fees-link">Ver tarifas de créditos aquí</a>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Campo Laboral -->
+<div class="career-field-container">
+    <div class="career-field-content">
+        <div class="career-field-info">
+            <h2 class="section-title-left">Campo Laboral</h2>
+            <ul class="career-field-list">
+                <li>Ingeniero de calidad.</li>
+                <li>Ingeniero de requerimientos.</li>
+                <li>Gerente de proyectos de software.</li>
+                <li>Líder de desarrollo de software.</li>
+                <li>Desarrollador de software web.</li>
+                <li>Integrador de soluciones web y móviles.</li>
+                <li>Desarrollador de aplicaciones móviles.</li>
+                <li>Líder Técnico de pruebas.</li>
+            </ul>
+        </div>
+        <div class="career-field-image">
+            <img src="assets/estudiante_software_trabajando.jpg" alt="Estudiante de software trabajando">
+        </div>
+    </div>
+</div>
+
+<!-- Banner de Inscripción -->
+<div class="enrollment-banner">
+    <h2 class="banner-title">Matrículas Abiertas</h2>
+    <p class="banner-text">Somos la institución universitaria para todos y nuestro objetivo es integrar a la comunidad con el sector productivo para afrontar los desafíos del futuro.</p>
+</div>
+
+<!-- Sección de Perfil del Egresado -->
+<div class="profile-container">
+    <div class="profile-content">
+        <div class="profile-image">
+            <img src="assets/estudiantes_colaborando.jpg" alt="Estudiantes colaborando">
+        </div>
+        <div class="profile-info">
+            <h2 class="section-title-left">Sé un experto en:</h2>
+            <ul class="expertise-list">
+                <li>Diseño y desarrollo web.</li>
+                <li>Diseño UX/UI.</li>
+                <li>Diseño y desarrollo de aplicaciones móviles.</li>
+                <li>Arquitectura de software.</li>
+                <li>Desarrollo backEnd.</li>
+                <li>Desarrollo frontEnd.</li>
+                <li>Ingeniería de requerimientos.</li>
+                <li>Cloud Computing.</li>
+                <li>Testeo y aseguramiento de la calidad.</li>
+                <li>Metodologías ágiles de desarrollo.</li>
+                <li>Gestión de proyectos de software.</li>
+                <li>Integración de tecnologías.</li>
+            </ul>
+            <a href="https://ucompensar.edu.co/wp-content/uploads/2021/04/Brochure-Ingenieria-de-Software-Presencial.pdf" class="study-plan-btn">Plan de Estudios</a>
+        </div>
+    </div>
+    
+    <h3 class="profile-subtitle">Este será tu perfil</h3>
+    <p class="profile-description">
+        El ingeniero de software es competente en todas y cada una de las etapas que comprenden el ciclo de vida de construcción de software como requerimientos, análisis, diseño, arquitectura, implementación, pruebas y puesta en marcha, así como de administrar tiempos, recursos y procesos de una manera efectiva para la finalización exitosa de proyectos de software.
+    </p>
+</div>
+
+<!-- Pie de Página (Footer) -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/Logo-Fundacion-Universitaria-compensar.svg" alt="Compensar Fundación Universitaria Logo">
+        </div>
+        
+        <div class="footer-info">
+            <p>Fundación Universitaria Compensar P.J. Resolución 23653 del 23 diciembre 1981 | 12425 del 9 de julio 2020 – VIGILADA MINEDUCACIÓN</p>
+            <p>Para requerimientos de autoridades, tutelas o notificaciones judiciales por favor diríjase al correo: <a href="mailto:notificaciones@ucompensar.edu.co">notificaciones@ucompensar.edu.co</a></p>
+        </div>
+        
+        <div class="footer-social">
+            <p>Síguenos en nuestras redes:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/UCompensar/" class="social-icon"><img src="assets/redes-footer-facebook.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com/ucompensar/" class="social-icon"><img src="assets/redes-footer-instagram.webp" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/school/fundaci%C3%B3n-universitaria-compensar/posts/?feedView=all" class="social-icon"><img src="assets/redes-footer-linkedin.webp" alt="LinkedIn"></a>
+                <a href="https://www.youtube.com/channel/UCfzWXgwqgfFbAGHtoUVMGnA" class="social-icon"><img src="assets/redes-footer-youtube.webp" alt="YouTube"></a>
+                <a href="https://www.tiktok.com/@ucompensar" class="social-icon"><img src="assets/redes-footer-tiktok.webp" alt="TikTok"></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-locations">
+        <div class="location-column">
+            <h3 class="location-title">Bogotá</h3>
+            <p>Sede principal</p>
+            <p>Avenida (Calle) 32 No. 17 – 30</p>
+            <p>Teléfono: 601 338 00 66</p>
+        </div>
+        
+        <div class="location-column">
+            <h3 class="location-title">Campus Av 68</h3>
+            <p>Av Carrera 68</p>
+            <p>No. 49 – 45</p>
+        </div>
+        
+        <div class="location-column">
+            <h3 class="location-title">Villavicencio</h3>
+            <p>Cra. 39 #33-25</p>
+        </div>
+        
+        <div class="certification-logos">
+            <img src="assets/thgaleria_220X220_128632.webp" alt="ISO 9001">
+            <img src="assets/ntc-5555.png" alt="NTC 5555">
+            <p>SC-CER844098</p>
+            <p>FT-CER726694</p>
+        </div>
+    </div>
+    
+    <div class="footer-links">
+        <h4>Links importantes</h4>
+        <div class="important-links">
+            <a href="https://ucompensar.edu.co/documentos-de-interes/">Documentos de Interés</a>
+            <a href="https://ucompensar.edu.co/pqrsf/">Política de PQRSF-AQUÍ</a>
+            <a href="https://ucompensar.edu.co/regimen-tributario-especial/">Régimen Tributario Especial</a>
+            <a href="https://ucompensar.edu.co/aviso-de-privacidad/">Aviso de privacidad</a>
+            <a href="https://www.elempleo.com/co/sitio-empresarial/ucompensar" class="chat-button">Hablar con nosotros</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2025 Compensar Fundación Universitaria. Todos los derechos reservados.</p>
+    </div>
+    
+    <div class="floating-buttons">
+        <a href="https://api.whatsapp.com/send?phone=573185160957&text=Hola%2C%20estoy%20interesado%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20programas%20que%20oferta%20UCompensar" class="whatsapp-button">
+            <img src="assets/wp_Mesa-de-trabajo-1.webp" alt="WhatsApp">
+        </a>
+        <a href="#" class="chat-support-button">
+            <img src="assets/mensaje.png" alt="Chat Support">
+        </a>
+    </div>
+</footer>
+```

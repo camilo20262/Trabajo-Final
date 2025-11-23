@@ -1,0 +1,1137 @@
+/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   Estilos Generales - Afectan a todos o a una amplia gama de elementos
+   ========================================================================== */
+
+* { /* Selector universal: Se aplica a TODOS los elementos de la página */
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total del elemento */
+    font-family: Arial, sans-serif; /* Establece una familia de fuentes predeterminada */
+}
+
+body { /* Estilos para el elemento <body>, el contenedor principal del contenido de la página */
+    color: #333; /* Color de texto predeterminado para la página */
+}
+
+/* ==========================================================================
+   Sección del Encabezado Superior - Contiene el logo y los enlaces de navegación superiores
+   ========================================================================== */
+
+.top-header { /* Estiliza el contenedor principal del encabezado superior */
+    display: flex; /* Organiza los elementos hijos (logo, top-nav) en una fila */
+    justify-content: space-between; /* Coloca espacio entre el logo y top-nav */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding: 10px 20px; /* Añade padding dentro del encabezado superior */
+    border-bottom: 1px solid #eee; /* Añade una línea gris claro en la parte inferior */
+}
+
+.logo { /* Estiliza el contenedor para la imagen del logo */
+    display: flex; /* Usado para alineación si hubiera múltiples elementos en .logo */
+    align-items: center; /* Alinea verticalmente la imagen del logo */
+}
+
+.logo img { /* Estiliza la imagen del logo en sí */
+    height: 40px; /* Establece la altura del logo */
+}
+
+.top-nav { /* Estiliza el contenedor de navegación en el encabezado superior */
+    display: flex; /* Organiza los enlaces de navegación en una fila */
+    gap: 15px; /* Añade espacio entre cada enlace de navegación */
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
+}
+
+.top-nav a { /* Estiliza los enlaces de navegación individuales en el encabezado superior */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Establece el color del texto del enlace */
+    font-size: 14px; /* Establece el tamaño de fuente para los enlaces */
+}
+.top-nav a:hover {
+    color: #ff8800; /* Cambia color al pasar el mouse */
+}
+
+.trabajo-btn { /* Estiliza el botón "Trabaje con nosotros" en la navegación superior */
+    background-color: #ff8800; /* Establece el color de fondo naranja */
+    color: white !important; /* Establece el color del texto a blanco, !important para asegurar que sobreescriba el color del 'a' */
+    padding: 8px 12px; /* Añade padding dentro del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 14px; /* Establece el tamaño de fuente */
+    transition: background-color 0.3s;
+}
+.trabajo-btn:hover {
+    background-color: #e67300; /* Naranja más oscuro */
+    color: white !important;
+}
+
+
+/* ==========================================================================
+   Barra de Navegación Principal - Debajo del encabezado superior, contiene los enlaces principales del sitio
+   ========================================================================== */
+
+.main-nav { /* Estiliza el contenedor de la barra de navegación principal */
+    display: flex; /* Organiza el menú principal y el icono de búsqueda en una fila */
+    justify-content: space-between; /* Coloca espacio entre el menú y el icono de búsqueda */
+    align-items: center; /* Alinea verticalmente los items */
+    padding: 15px 20px; /* Añade padding dentro de la barra de navegación */
+    border-bottom: 1px solid #eee; /* Añade una línea gris claro en la parte inferior */
+}
+
+.main-menu { /* Estiliza el contenedor para los enlaces del menú principal */
+    display: flex; /* Organiza los enlaces del menú en una fila */
+    gap: 25px; /* Añade espacio entre cada enlace del menú principal */
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten */
+}
+
+.main-menu a { /* Estiliza los enlaces individuales en el menú principal */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #003366; /* Establece el color del texto del enlace (azul oscuro) */
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 16px; /* Establece el tamaño de fuente */
+    transition: color 0.3s;
+}
+.main-menu a:hover {
+    color: #ff8800; /* Naranja al pasar el mouse */
+}
+
+.search-icon { /* Estiliza el contenedor del icono de búsqueda */
+    background-color: #ff8800; /* Fondo naranja */
+    color: white; /* Color del icono (si fuera texto, o para el emoji) */
+    width: 30px; /* Establece el ancho */
+    height: 30px; /* Establece la altura */
+    border-radius: 50%; /* Lo hace un círculo */
+    display: flex; /* Para centrar el icono/texto dentro */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    cursor: pointer; /* Indica que es clickeable */
+    transition: background-color 0.3s;
+}
+.search-icon:hover {
+    background-color: #e67300; /* Naranja más oscuro */
+}
+
+/* ==========================================================================
+   Navegación de Migas de Pan (Breadcrumb) - Muestra la ubicación actual del usuario en el sitio
+   ========================================================================== */
+
+.breadcrumb { /* Estiliza el contenedor de las migas de pan */
+    padding: 10px 20px; /* Añade padding */
+    font-size: 12px; /* Establece un tamaño de fuente pequeño */
+    color: #777; /* Establece el color del texto a gris */
+}
+
+.breadcrumb a { /* Estiliza los enlaces dentro de las migas de pan */
+    color: #777; /* Color del enlace igual al texto circundante */
+    text-decoration: none; /* Elimina el subrayado */
+}
+.breadcrumb a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+
+/* ==========================================================================
+   Etiqueta de Tipo de Programa - Indica si el programa es "Presencial", etc.
+   ========================================================================== */
+
+.program-type { /* Estiliza el contenedor para la etiqueta de tipo de programa */
+    display: flex; /* Usado para centrar la etiqueta */
+    justify-content: center; /* Centra horizontalmente la etiqueta */
+    margin: 20px 0; /* Añade margen arriba y abajo */
+}
+
+.presencial-tag { /* Estiliza la etiqueta "Presencial" en sí */
+    background-color: #ff8800; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    padding: 8px 30px; /* Padding dentro de la etiqueta */
+    border-radius: 20px; /* Redondea significativamente las esquinas */
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+/* ==========================================================================
+   Sección de Contenido Principal - Contiene título del programa, descripción e imagen
+   ========================================================================== */
+
+.main-content { /* Estiliza el envoltorio del área de contenido principal */
+    display: flex; /* Organiza la información del programa y la imagen en una fila */
+    padding: 0 20px; /* Añade padding horizontal */
+    margin-bottom: 30px; /* Añade margen en la parte inferior */
+    gap: 20px; /* Espacio entre program-info y program-image */
+}
+
+.program-info { /* Estiliza la columna izquierda que contiene texto y botones del programa */
+    flex: 1.5; /* Ocupa más espacio que la imagen */
+    padding-right: 30px; /* Añade padding a la derecha, creando espacio desde la imagen */
+}
+
+.program-title { /* Estiliza el título principal del programa */
+    font-size: 36px; /* Tamaño de fuente grande */
+    color: #003366; /* Color azul oscuro */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+.program-description { /* Estiliza el párrafo descriptivo sobre el programa */
+    line-height: 1.6; /* Aumenta el espacio entre líneas de texto */
+    margin-bottom: 20px; /* Espacio debajo del párrafo */
+    font-size: 16px;
+}
+
+.program-description span { /* Estiliza cualquier elemento <span> dentro de la descripción (usado para poner partes en negrita) */
+    font-weight: bold; /* Hace el texto dentro del span en negrita */
+}
+
+.enrollment-btn { /* Estiliza el botón "Inscríbete aquí" */
+    display: inline-block; /* Permite establecer padding/margen, pero fluye con el texto */
+    border: 2px solid #ff8800; /* Borde naranja */
+    color: #ff8800; /* Texto naranja */
+    padding: 12px 25px; /* Padding dentro del botón */
+    border-radius: 30px; /* Esquinas muy redondeadas */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace el texto en negrita */
+    margin-bottom: 20px; /* Espacio debajo del botón (si otro elemento siguiera en línea) */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+}
+.enrollment-btn:hover {
+    background-color: #ff8800;
+    color: white;
+}
+
+.fees-btn { /* Estiliza el botón "Ver tarifas de créditos aquí" */
+    display: inline-block; /* Similar a enrollment-btn */
+    background-color: #ff8800; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    padding: 12px 25px; /* Padding */
+    border-radius: 30px; /* Esquinas muy redondeadas */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace el texto en negrita */
+    transition: background-color 0.3s, opacity 0.3s; /* Transición suave */
+}
+.fees-btn:hover {
+    background-color: #e67300; /* Un naranja un poco más oscuro */
+    opacity: 0.9;
+}
+
+.program-image { /* Estiliza la columna derecha que contiene la imagen del programa */
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-image img { /* Estiliza la imagen dentro del contenedor .program-image */
+    width: 70%; /* Ajustado para que no sea tan grande */
+    max-width: 400px; /* Limite para que no crezca demasiado en pantallas grandes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+/* ==========================================================================
+   Sección de Detalles del Programa - SNIES, Resolución, Duración, etc.
+   ========================================================================== */
+
+.program-details { /* Estiliza el contenedor para la información detallada del programa */
+    background-color: #5b7992; /* Fondo gris azulado */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Padding dentro del contenedor */
+    text-align: center; /* Centra el texto dentro de este bloque */
+}
+
+.program-details p { /* Estiliza los párrafos dentro de la sección de detalles del programa */
+    margin: 8px 0; /* Pequeño margen arriba y abajo de cada párrafo */
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Sección de Costo del Programa - Muestra el costo del primer semestre
+   ========================================================================== */
+
+.program-cost { /* Estiliza el contenedor para el costo del programa */
+    background-color: #b92f67; /* Fondo magenta/púrpura */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 25px 20px; /* Padding dentro del contenedor */
+}
+
+.program-cost h2 { /* Estiliza el encabezado "Valor primer semestre" */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    font-size: 24px; /* Tamaño de fuente para el encabezado */
+    font-weight: normal;
+}
+
+.program-cost p { /* Estiliza el párrafo que contiene el valor real del costo */
+    font-size: 32px; /* Tamaño de fuente más grande para el costo */
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Divisores y Títulos de Sección - Estilos de utilidad general
+   ========================================================================== */
+
+.divider { /* Estiliza la regla horizontal <hr class="divider"> */
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 1px solid #e0e0e0; /* Línea más clara */
+    margin: 40px 20px; /* Margen arriba/abajo y en los lados */
+}
+
+.section-title { /* Estiliza títulos de sección generales (ej., "Déjanos tus datos", "Titulaciones") */
+    text-align: center; /* Centra el texto del título */
+    color: #003366; /* Color azul oscuro */
+    font-size: 30px; /* Tamaño de fuente */
+    margin: 40px 0 30px 0; /* Margen arriba y abajo */
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Sección del Formulario de Contacto
+   ========================================================================== */
+
+.contact-form-container { /* Estiliza el envoltorio principal para el formulario de contacto */
+    padding: 0 20px; /* Padding horizontal */
+    max-width: 900px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.contact-form { /* Estiliza el elemento <form> en sí */
+    position: relative; /* Necesario para el posicionamiento absoluto de .financing-popup */
+    background-color: #f9f9f9; /* Fondo ligero para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-row { /* Estiliza una fila dentro del formulario, conteniendo una o más entradas/grupos */
+    display: flex; /* Organiza los elementos dentro de la fila uno al lado del otro */
+    gap: 20px; /* Espacio entre elementos en la fila */
+    margin-bottom: 20px; /* Espacio debajo de cada fila */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea en pantallas más pequeñas */
+}
+
+.form-input { /* Estiliza campos de entrada de texto generales (<input type="text">, "email", "tel") */
+    flex: 1; /* Permite que las entradas crezcan y compartan espacio dentro de un .form-row */
+    padding: 12px 15px; /* Padding dentro del campo de entrada */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 25px; /* Esquinas redondeadas para el campo de entrada */
+    outline: none; /* Elimina el contorno predeterminado del navegador al enfocar */
+    min-width: 200px; /* Ancho mínimo para cada entrada antes de envolver o encoger */
+    font-size: 15px;
+}
+.form-input:focus {
+    border-color: #ff8800; /* Resalta el borde al enfocar */
+    box-shadow: 0 0 0 2px rgba(255, 136, 0, 0.2);
+}
+
+.form-group { /* Estiliza un contenedor para una etiqueta y su desplegable select correspondiente */
+    flex: 1; /* Permite que los grupos crezcan y compartan espacio */
+    min-width: 200px; /* Ancho mínimo para cada grupo */
+    /* margin-bottom: 10px;  Ya tenemos margen en form-row */
+}
+
+.form-group label { /* Estiliza etiquetas asociadas con entradas/selects del formulario */
+    display: block; /* Hace que la etiqueta ocupe su propia línea */
+    font-size: 14px; /* Tamaño de fuente para etiquetas */
+    margin-bottom: 8px; /* Espacio debajo de la etiqueta, antes de la entrada/select */
+    color: #555; /* Color de texto gris para etiquetas */
+    font-weight: bold;
+}
+
+.form-select { /* Estiliza elementos <select> desplegables */
+    width: 100%; /* Hace que el select ocupe todo el ancho de su contenedor .form-group */
+    padding: 12px 15px; /* Padding dentro del select */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 25px; /* Esquinas redondeadas */
+    outline: none; /* Elimina el contorno predeterminado */
+    appearance: none; /* Elimina el estilo predeterminado del navegador para la flecha del select */
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") no-repeat; /* Añade una flecha desplegable personalizada usando un URI de datos SVG */
+    background-position: right 15px center; /* Posiciona la flecha personalizada a la derecha */
+    background-size: 12px 12px; /* Tamaño de la flecha */
+    font-size: 15px;
+    color: #333;
+}
+.form-select:focus {
+    border-color: #ff8800;
+    box-shadow: 0 0 0 2px rgba(255, 136, 0, 0.2);
+}
+
+
+.checkbox-container { /* Estiliza el contenedor para la casilla de aceptación de políticas y su etiqueta */
+    display: flex; /* Organiza la casilla y la etiqueta una al lado de la otra */
+    align-items: center; /* Alinea verticalmente la casilla y la etiqueta */
+    margin-right: 20px; /* Espacio a la derecha del contenedor (antes del botón de enviar) */
+    font-size: 14px;
+    color: #555;
+}
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #ff8800; /* Cambia el color de la marca de verificación */
+}
+
+.policy-link { /* Estiliza el enlace "Política de Protección de Datos Personales" */
+    color: #ff8800; /* Color naranja */
+    text-decoration: underline; /* Subraya el enlace */
+}
+.policy-link:hover {
+    color: #e67300; /* Naranja más oscuro al pasar el mouse */
+}
+
+
+.submit-btn { /* Estiliza el botón "Enviar" para el formulario */
+    background-color: #ff8800; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    padding: 12px 30px; /* Padding */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón */
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #e67300; /* Naranja más oscuro */
+}
+
+.financing-popup { /* Estiliza el pequeño popup relacionado con la financiación (mostrado condicionalmente) */
+    /* position: absolute;  Se maneja en JS o se cambia a static en mobile */
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* bottom: -50px;  */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10; /* Para que esté sobre otros elementos si es necesario */
+    margin-top: 15px; /* Espacio si se muestra debajo del formulario */
+    text-align: center;
+    /* display: none; Se maneja con JS o en HTML */
+}
+
+/* ==========================================================================
+   Sección de Titulaciones
+   ========================================================================== */
+
+.degrees-container { /* Estiliza el envoltorio principal para la sección de titulaciones */
+    padding: 0 20px; /* Padding horizontal */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto 50px auto; /* Centra el contenedor y añade margen inferior */
+}
+
+.degrees-row { /* Estiliza la fila que contiene múltiples tarjetas de titulación */
+    display: flex; /* Organiza las tarjetas de titulación una al lado de la otra */
+    gap: 25px; /* Espacio entre tarjetas de titulación */
+    justify-content: space-around; /* Distribuye el espacio entre tarjetas (si no llenan el ancho) */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas más pequeñas */
+}
+
+.degree-card { /* Estiliza una tarjeta individual para cada titulación */
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    padding: 30px; /* Padding dentro de la tarjeta */
+    flex: 1; /* Permite que las tarjetas crezcan y compartan espacio */
+    min-width: 300px; /* Ancho mínimo para una tarjeta antes de envolver */
+    max-width: 360px; /* Ancho máximo para que no se estiren demasiado */
+    text-align: center; /* Centra el contenido de texto dentro de la tarjeta */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transición para hover */
+}
+.degree-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+
+.degree-level { /* Estiliza el texto que indica el nivel (Técnica, Tecnología, Profesional) */
+    color: #555; /* Color gris oscuro */
+    margin-bottom: 10px; /* Espacio debajo */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: 500;
+}
+
+.degree-name { /* Estiliza el nombre del programa de titulación */
+    color: #003366; /* Color azul oscuro */
+    margin-bottom: 15px; /* Espacio debajo */
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 1.3;
+}
+
+.degree-details { /* Estiliza párrafos que contienen detalles como Resolución, SNIES */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-bottom: 8px; /* Pequeño espacio debajo de cada línea de detalle */
+    color: #666; /* Color de texto gris */
+    line-height: 1.5;
+}
+
+.fees-link { /* Estiliza el enlace "Ver tarifas de créditos aquí" dentro de una tarjeta de titulación */
+    display: inline-block; /* Permite margen/padding */
+    color: #ff8800; /* Color naranja */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace el texto en negrita */
+    margin-top: 20px; /* Espacio arriba del enlace */
+    font-size: 15px;
+    padding: 8px 15px;
+    border: 1px solid #ff8800;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.fees-link:hover {
+    background-color: #ff8800;
+    color: white;
+}
+
+/* ==========================================================================
+   Sección de Campo Laboral
+   ========================================================================== */
+
+.career-field-container { /* Estiliza el envoltorio para la sección de campo laboral */
+    padding: 30px 20px; /* Padding */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.career-field-content { /* Estiliza el contenedor para la información de texto y la imagen dentro del campo laboral */
+    display: flex; /* Organiza el texto y la imagen uno al lado del otro */
+    gap: 40px; /* Espacio entre texto e imagen */
+    align-items: center; /* Alinea verticalmente texto e imagen */
+}
+
+.career-field-info { /* Estiliza la parte que contiene el título y la lista de roles laborales */
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.section-title-left { /* Estiliza títulos de sección alineados a la izquierda (ej., "Campo Laboral", "Sé un experto en:") */
+    color: #003366; /* Color azul oscuro */
+    font-size: 28px; /* Tamaño de fuente */
+    margin-bottom: 25px; /* Espacio debajo */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-weight: bold;
+}
+
+.career-field-list { /* Estiliza la lista no ordenada (<ul>) de roles laborales */
+    list-style-type: none; /* Sin viñetas por defecto, se añadirán personalizadas */
+    padding-left: 0; 
+}
+
+.career-field-list li { /* Estiliza elementos de lista individuales (<li>) en la lista de roles laborales */
+    margin-bottom: 12px; /* Espacio debajo de cada elemento de lista */
+    line-height: 1.6; /* Espacio entre líneas dentro de un elemento de lista (si se envuelve) */
+    color: #333; /* Color de texto */
+    font-size: 16px;
+    position: relative;
+    padding-left: 25px; /* Espacio para la viñeta personalizada */
+}
+.career-field-list li::before {
+    content: '✔'; /* Viñeta de checkmark */
+    color: #ff8800; /* Color naranja */
+    position: absolute;
+    left: 0;
+    top: 1px; /* Ajuste vertical */
+    font-weight: bold;
+}
+
+.career-field-image { /* Estiliza el contenedor para la imagen en la sección de campo laboral */
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.career-field-image img { /* Estiliza la imagen en sí */
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas para la imagen */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   Banner de Inscripción
+   ========================================================================== */
+
+.enrollment-banner { /* Estiliza el banner para "Matrículas Abiertas" */
+    background-color: #003366; /* Color institucional de fondo */
+    color: white; /* Texto blanco */
+    padding: 40px 20px; /* Padding */
+    text-align: center; /* Centra el contenido */
+    margin: 50px 0; /* Margen arriba y abajo del banner */
+}
+
+.banner-title { /* Estiliza el título dentro del banner de inscripción */
+    color: white; /* Color de texto blanco (heredado, pero explícito) */
+    font-size: 32px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Espacio debajo */
+    font-weight: bold;
+}
+
+.banner-text { /* Estiliza el texto descriptivo dentro del banner de inscripción */
+    max-width: 800px; /* Limita el ancho del bloque de texto para legibilidad */
+    margin: 0 auto 25px auto; /* Centra el texto block y añade espacio abajo */
+    line-height: 1.7; /* Espacio entre líneas */
+    font-size: 17px;
+    color: #f0f0f0; /* Un blanco ligeramente más suave */
+}
+/* Se podría añadir un botón dentro del banner si se desea */
+
+
+/* ==========================================================================
+   Sección de Perfil - "Sé un experto en:", "Este será tu perfil"
+   ========================================================================== */
+
+.profile-container { /* Estiliza el envoltorio principal para la sección de perfil del estudiante */
+    padding: 0 20px 40px 20px; /* Padding (más en la parte inferior) */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.profile-content { /* Estiliza el contenedor para la imagen y la lista "Sé un experto en:" */
+    display: flex; /* Organiza la imagen y la lista de experiencia una al lado de la otra */
+    gap: 40px; /* Espacio entre imagen y lista */
+    margin-bottom: 40px; /* Espacio debajo de este bloque de contenido */
+    align-items: flex-start; /* Alinea los items al inicio si tienen alturas diferentes */
+}
+
+.profile-image { /* Estiliza el contenedor para la imagen en la sección de perfil */
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.profile-image img { /* Estiliza la imagen en sí */
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-info { /* Estiliza el contenedor para el título "Sé un experto en:", la lista y el botón del plan de estudios */
+    flex: 1.2; /* Un poco más de espacio para el texto */
+    position: relative; /* Necesario para el posicionamiento absoluto de .study-plan-btn */
+    padding-bottom: 60px; /* Espacio para el botón si es absoluto */
+}
+
+.expertise-list { /* Estiliza la lista no ordenada (<ul>) de áreas de experiencia */
+    list-style-type: none; /* Elimina las viñetas predeterminadas */
+    padding-left: 0; /* Elimina el padding izquierdo predeterminado para listas */
+    columns: 2; /* Divide la lista en dos columnas si hay espacio */
+    column-gap: 30px;
+}
+
+.expertise-list li { /* Estiliza elementos de lista individuales (<li>) en la lista de experiencia */
+    margin-bottom: 10px; /* Espacio debajo de cada elemento */
+    line-height: 1.6; /* Interlineado */
+    color: #333; /* Color de texto */
+    font-size: 16px;
+    position: relative; /* Para posicionar la viñeta personalizada */
+    padding-left: 25px; /* Espacio para la viñeta personalizada */
+    break-inside: avoid-column; /* Evita que los items se partan entre columnas */
+}
+
+.expertise-list li:before { /* Crea una viñeta personalizada para cada elemento de la lista de experiencia */
+    content: "✓"; /* El carácter de la viñeta */
+    color: #ff8800; /* Color naranja para la viñeta */
+    font-size: 16px; /* Tamaño de la viñeta */
+    position: absolute; /* Posiciona relativo al <li> */
+    left: 0; /* Alinea a la izquierda del área de padding */
+    top: 2px; /* Ajusta finamente la alineación vertical de la viñeta */
+    font-weight: bold;
+}
+
+.study-plan-btn { /* Estiliza el botón "Plan de Estudios" */
+    display: inline-block; /* Permite padding/margen */
+    background-color: #0056b3; /* Azul más oscuro y corporativo */
+    color: white; /* Texto blanco */
+    padding: 12px 25px; /* Padding */
+    border-radius: 25px; /* Esquinas redondeadas */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace el texto en negrita */
+    position: absolute; /* Posiciona relativo a .profile-info */
+    bottom: 0; /* Alinea a la parte inferior de .profile-info */
+    right: 0; /* Alinea a la derecha de .profile-info */
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.study-plan-btn:hover {
+    background-color: #004494; /* Azul aún más oscuro */
+}
+
+.profile-subtitle { /* Estiliza el subtítulo "Este será tu perfil" */
+    color: #ff8800; /* Color naranja */
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Espacio debajo */
+    position: relative; /* Para posicionar el pseudo-elemento ::after (underline) */
+    padding-bottom: 10px; /* Espacio debajo del texto, arriba del subrayado */
+    font-weight: bold;
+    border-bottom: 3px solid #ff8800; /* Reemplaza el :after por un borde directo */
+    display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
+}
+
+.profile-subtitle:after { /* Eliminado, se usa border-bottom directo */
+    content: none;
+}
+
+.profile-description { /* Estiliza el párrafo descriptivo para "Este será tu perfil" */
+    line-height: 1.7; /* Interlineado */
+    color: #333; /* Color de texto */
+    margin-bottom: 20px; /* Espacio debajo */
+    font-size: 16px;
+    text-align: justify; /* Justifica el texto para una apariencia más formal */
+}
+
+/* ==========================================================================
+   Sección del Pie de Página (Footer)
+   ========================================================================== */
+
+.footer { /* Estiliza el elemento principal <footer> */
+    background-color: #323a43; /* Fondo gris oscuro/azul */
+    color: #f0f0f0; /* Texto blanco más suave */
+    padding: 40px 20px 20px 20px; /* Padding */
+    position: relative; /* Puede usarse para posicionar elementos dentro si es necesario */
+    font-size: 14px;
+}
+
+.footer-container { /* Estiliza el envoltorio de contenido principal dentro del pie de página */
+    display: flex; /* Organiza logo, información e iconos sociales uno al lado del otro */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: flex-start; /* Alinea al inicio para mejor distribución si hay alturas diferentes */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto 30px auto; /* Centra el contenedor y añade margen inferior */
+    border-bottom: 1px solid #4a5562; /* Línea divisoria más sutil */
+    padding-bottom: 30px; /* Espacio debajo del contenido, arriba del borde */
+    gap: 20px; /* Espacio entre items cuando se envuelven */
+}
+
+.footer-logo { /* Estiliza el contenedor para el logo en el pie de página */
+    flex-basis: 200px; /* Ancho base del logo */
+    flex-grow: 0; /* No crece */
+}
+
+.footer-logo img { /* Estiliza la imagen del logo del pie de página en sí */
+    max-width: 100%; /* Asegura que el logo sea responsivo y no desborde su contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.footer-info { /* Estiliza el contenedor para información legal/de contacto en el pie de página */
+    flex: 2; /* Ocupa más espacio */
+    min-width: 300px; /* Ancho mínimo para evitar que se comprima demasiado */
+    line-height: 1.7;
+}
+
+.footer-info a { /* Estiliza enlaces dentro de la información del pie de página (ej., dirección de correo) */
+    color: #ff8800; /* Color naranja */
+    text-decoration: none; /* Elimina el subrayado */
+}
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social { /* Estiliza el contenedor para enlaces/iconos de redes sociales */
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: right; /* Alinea el contenido (texto e iconos) a la derecha */
+    min-width: 200px;
+}
+.footer-social p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.social-icons { /* Estiliza el contenedor que contiene los iconos individuales de redes sociales */
+    display: flex; /* Organiza los iconos uno al lado del otro */
+    justify-content: flex-end; /* Alinea los iconos a la derecha de su contenedor */
+    gap: 12px; /* Espacio entre iconos */
+}
+
+.social-icon { /* Estiliza enlaces de iconos de redes sociales individuales (etiquetas <a>) */
+    display: flex; /* Para centrar la imagen dentro */
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    width: 36px; /* Ancho del fondo del icono */
+    height: 36px; /* Alto del fondo del icono */
+    background-color: #4a5562; /* Fondo gris azulado para el círculo del icono */
+    border-radius: 50%; /* Hace el fondo circular */
+    transition: background-color 0.3s;
+}
+.social-icon:hover {
+    background-color: #ff8800; /* Naranja al pasar el mouse */
+}
+.social-icon img { /* Estiliza la etiqueta <img> del icono social */
+    max-width: 20px; /* Limita el tamaño de la imagen del icono */
+    max-height: 20px; /* Limita el tamaño de la imagen del icono */
+    filter: brightness(0) invert(1); /* Hace el icono blanco si es oscuro originalmente */
+}
+
+
+.footer-locations { /* Estiliza el contenedor para la información de ubicación de la universidad */
+    display: flex; /* Organiza las columnas de ubicación una al lado de la otra */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas más pequeñas */
+    justify-content: space-between; /* Distribuye el espacio */
+    max-width: 1200px; /* Limita el ancho */
+    margin: 0 auto 30px auto; /* Centra y añade margen inferior */
+    padding: 20px 0; /* Vertical padding */
+    border-bottom: 1px solid #4a5562; /* Línea divisoria */
+    gap: 20px;
+}
+
+.location-column { /* Estiliza una sola columna de información de ubicación */
+    flex: 1; /* Permite que las columnas compartan espacio */
+    min-width: 220px; /* Ancho mínimo antes de envolver */
+    padding: 0 10px; /* Padding horizontal dentro de la columna */
+    line-height: 1.6;
+}
+
+.location-title { /* Estiliza el título de cada ubicación (Bogotá, Campus Av 68, etc.) */
+    color: #ff8800; /* Color naranja */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold;
+}
+
+.certification-logos { /* Estiliza el contenedor para los logos de certificación (ISO, NTC) */
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex; /* Organiza logos/texto */
+    flex-direction: column; /* Apila logos y texto */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 10px; /* Espacio entre logos si están uno al lado del otro */
+    min-width: 200px;
+    text-align: center;
+}
+.certification-logos div { /* Contenedor para cada par de logo y texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.certification-logos img { /* Estiliza las imágenes de los logos de certificación */
+    max-width: 70px; /* Limita el tamaño de la imagen */
+    max-height: 70px; /* Limita el tamaño de la imagen */
+    margin-bottom: 5px;
+}
+
+.certification-logos p { /* Estiliza texto asociado con los logos de certificación */
+    font-size: 12px; /* Tamaño de fuente pequeño */
+    margin-top: 0;
+}
+
+.footer-links { /* Estiliza el contenedor para "Links importantes" */
+    max-width: 1200px; /* Limita el ancho */
+    margin: 0 auto 30px auto; /* Centra y añade margen inferior */
+}
+
+.footer-links h4 { /* Estiliza el encabezado "Links importantes" */
+    color: #ff8800; /* Color naranja */
+    margin-bottom: 15px; /* Espacio debajo */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold;
+}
+
+.important-links { /* Estiliza el contenedor para la lista de enlaces importantes */
+    display: flex; /* Organiza los enlaces uno al lado del otro */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+    gap: 15px 25px; /* Espacio vertical y horizontal entre enlaces */
+}
+
+.important-links a { /* Estiliza enlaces importantes individuales */
+    color: #f0f0f0; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 15px; /* Tamaño de fuente */
+    transition: color 0.3s;
+}
+.important-links a:hover {
+    color: #ff8800; /* Naranja al pasar el mouse */
+    text-decoration: underline;
+}
+
+.chat-button { /* Estiliza el botón "Hablar con nosotros" en los enlaces importantes */
+    background-color: #ff8800; /* Fondo naranja */
+    padding: 10px 20px; /* Padding */
+    border-radius: 25px; /* Esquinas redondeadas */
+    color: white !important; /* Texto blanco, !important para sobreescribir el color de .important-links a */
+    text-decoration: none !important; /* Sin subrayado */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.chat-button:hover {
+    background-color: #e67300; /* Naranja más oscuro */
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.footer-bottom { /* Estiliza la parte inferior del pie de página (texto de copyright) */
+    text-align: center; /* Centra el texto */
+    padding-top: 20px; /* Espacio arriba del texto (después de la última línea divisoria) */
+    font-size: 13px; /* Tamaño de fuente pequeño */
+    max-width: 1200px; /* Limita el ancho */
+    margin: 0 auto; /* Centra */
+    color: #aaa; /* Color gris claro para copyright */
+}
+
+/* ==========================================================================
+   Botones de Acción Flotantes (WhatsApp, Chat)
+   ========================================================================== */
+
+.floating-buttons { /* Estiliza el contenedor para los botones flotantes fijos */
+    position: fixed; /* Mantiene los botones en su lugar durante el scroll */
+    bottom: 25px; /* Distancia desde la parte inferior de la ventana gráfica */
+    right: 25px; /* Distancia desde la derecha de la ventana gráfica */
+    display: flex; /* Organiza los botones (si hay más de uno en el futuro, o para alineación) */
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 15px; /* Espacio entre botones si hay múltiples */
+    z-index: 1000; /* Asegura que los botones estén encima de otro contenido */
+}
+
+.whatsapp-button,
+.chat-support-button { /* Estiliza botones de acción flotantes individuales */
+    display: flex; /* Para centrar la imagen del icono */
+    align-items: center; /* Centra verticalmente el icono */
+    justify-content: center; /* Centra horizontalmente el icono */
+    width: 55px; /* Ancho del botón */
+    height: 55px; /* Alto del botón */
+    border-radius: 50%; /* Hace el botón circular */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.whatsapp-button:hover,
+.chat-support-button:hover {
+    transform: scale(1.1); /* Agranda ligeramente el botón */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.whatsapp-button {
+    background-color: #25d366; /* Verde WhatsApp */
+}
+.chat-support-button {
+    background-color: #ff8800; /* Naranja de la marca */
+}
+
+.whatsapp-button img, .chat-support-button img { /* Estiliza las imágenes de los iconos dentro de los botones flotantes */
+    width: 28px; /* Ajusta el tamaño del icono dentro del botón */
+    height: 28px; /* Ajusta el tamaño del icono dentro del botón */
+}
+
+
+/* ==========================================================================
+   Estilos Responsivos - Ajustes para pantallas más pequeñas (ancho máximo: 768px)
+   ========================================================================== */
+
+@media (max-width: 992px) { /* Ajustes para tablets y pantallas medianas */
+    .top-nav, .main-menu {
+        gap: 15px; /* Reduce el espacio entre ítems del menú */
+    }
+    .program-info {
+        padding-right: 15px;
+    }
+    .program-image img {
+        width: 85%;
+    }
+    .expertise-list {
+        columns: 1; /* En tablets, mejor una sola columna para la lista de expertise */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Encabezado Superior y Navegación Principal en Móvil */
+    .top-header {
+        flex-direction: column;
+        align-items: center; /* Centra logo y nav cuando se apilan */
+        gap: 10px;
+    }
+     .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-nav, .main-menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center; /* Centra los enlaces del menú */
+        gap: 0; /* Sin gap, el padding y borde harán la separación */
+        margin-top: 10px;
+    }
+    .top-nav a, .main-menu a {
+        padding: 10px 0; /* Más padding para mejorar toque */
+        text-align: center; /* Centra el texto de los enlaces */
+        width: 100%; /* Ocupa todo el ancho */
+        border-bottom: 1px solid #f0f0f0; /* Separador ligero entre ítems */
+    }
+    .top-nav a:last-child, .main-menu a:last-child {
+        border-bottom: none; /* Sin borde para el último ítem */
+    }
+    .trabajo-btn {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        width: auto; /* Ajusta el ancho al contenido */
+        padding: 10px 20px;
+    }
+    .search-icon {
+        align-self: center; /* Centra el icono de búsqueda */
+        margin-top: 15px;
+    }
+
+    /* Pie de Página en Móvil */
+    .footer-container,
+    .footer-locations {
+        text-align: center;
+        align-items: center; /* Centra los items en el contenedor flex */
+    }
+     .footer-container {
+        flex-direction: column; /* Asegura que los items principales del footer se apilen */
+    }
+    .footer-social, .footer-info, .location-column {
+        text-align: center; /* Asegura que el texto dentro esté centrado */
+        min-width: 100%; /* Ocupan todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio entre secciones apiladas del footer */
+    }
+    .footer-social {
+        order: 3; /* Mueve las redes sociales al final en móvil si se desea */
+    }
+    .footer-info {
+        order: 2;
+    }
+    .footer-logo {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .footer-social p {
+        margin-top: 0; /* Quita margen superior si ya hay gap en el contenedor flex */
+    }
+    .social-icons {
+        justify-content: center;
+    }
+
+
+    .footer-locations {
+         flex-direction: column; /* Columnas de ubicación se apilan */
+    }
+    .location-column {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+    .certification-logos {
+        margin-top: 10px;
+        flex-direction: row; /* Los logos pueden ir en fila si caben */
+        flex-wrap: wrap; /* Permitir que se envuelvan si son muchos */
+        gap: 15px;
+        justify-content: center;
+    }
+     .certification-logos div { 
+        margin-bottom: 10px;
+    }
+
+    .important-links {
+        flex-direction: column; /* Enlaces importantes se apilan */
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+    .important-links a {
+        margin-bottom: 5px;
+        display: block;
+        width: auto; /* Que se ajuste al texto */
+        text-align: center;
+    }
+    .chat-button {
+        display: inline-block;
+        width: auto;
+        margin-top: 10px;
+    }
+
+
+    /* Contenido Principal de la Página en Móvil */
+    .main-content {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+    }
+    .program-info {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .program-title {
+        font-size: 30px; /* Reduce tamaño de título principal */
+    }
+    .program-image {
+        margin-bottom: 20px; /* Espacio entre imagen y texto */
+    }
+    .program-image img {
+        width: 60%; /* Reduce tamaño de imagen de programa */
+        max-width: 250px;
+    }
+
+    .career-field-content {
+        flex-direction: column;
+    }
+    .career-field-image {
+        margin-top: 20px;
+        order: -1; /* Imagen arriba del texto */
+    }
+    .profile-content {
+        flex-direction: column;
+    }
+    .profile-image {
+        margin-bottom: 20px;
+        order: -1; /* Imagen arriba del texto */
+    }
+    .expertise-list {
+        columns: 1; /* Una sola columna en móvil */
+    }
+    .profile-info {
+        padding-bottom: 0; /* El botón ya no es absoluto */
+    }
+    .study-plan-btn {
+        position: static;
+        display: block;
+        margin: 25px auto 0 auto; /* Centrado y con margen superior */
+        text-align: center;
+        width: fit-content;
+    }
+    .profile-subtitle {
+        text-align: center;
+        display: block; /* Para que el centrado funcione bien con el borde */
+    }
+    .profile-description {
+        text-align: left; /* Puede ser mejor que justificado en móvil */
+    }
+
+    .financing-popup {
+        position: static; /* Cambia a estático para que fluya con el contenido */
+        transform: none;
+        width: 90%;
+        margin: 15px auto 0 auto; /* Margen para separarlo */
+        text-align: center;
+        /* display: none; sigue siendo manejado por JS */
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .form-input, .form-group, .form-select {
+        min-width: 100%;
+    }
+    .contact-form .form-row:last-child { /* La fila del checkbox y el botón */
+        flex-direction: column; /* Apila checkbox y botón */
+        align-items: center; /* Centra el botón */
+    }
+    .checkbox-container {
+        margin-right: 0;
+        margin-bottom: 15px; /* Espacio antes del botón si se apilan */
+        justify-content: center;
+        text-align: center; /* Para el label del checkbox */
+    }
+
+
+    .degrees-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .degree-card {
+        margin-bottom: 0; /* El gap de la flex-row se encarga */
+        min-width: 90%; /* Que ocupe más ancho en móvil */
+        max-width: 100%;
+    }
+    .section-title, .section-title-left {
+        font-size: 26px; /* Títulos de sección un poco más pequeños */
+        text-align: center !important; /* Forzar centrado para todos los títulos de sección en móvil */
+    }
+    .banner-title {
+        font-size: 28px;
+    }
+    .banner-text {
+        font-size: 16px;
+    }
+}
