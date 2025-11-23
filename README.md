@@ -1,7 +1,7 @@
 ﻿# Trabajo Final
  📌 PROYECTO: Migración de Sitio Web Estático a Angular
 📅 FECHA: 22 de noviembre de 2025
-👨‍💻 AUTOR: Camilo
+👨‍💻 AUTOR: Juan
 📂 REPOSITORIO: https://github.com/camilo20262/Trabajo-Final
 
 📄 1. Resumen Ejecutivo
@@ -91,4 +91,5 @@ La migración fue realizada exitosamente y ahora el sitio cuenta con:
 🗂️ Estructura ordenada y profesional
 
 🔧 Base sólida para futuras mejoras
+
 
